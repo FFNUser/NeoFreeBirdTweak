@@ -55,8 +55,6 @@
 + (BOOL)stripTrackingParams;
 + (BOOL)alwaysFollowingPage;
 + (BOOL)stopHidingTabBar;
-+ (BOOL)changeBackground;
-+ (bool)backgroundImage;
 + (BOOL)hideBookmarkButton;
 + (BOOL)customVoice;
 + (BOOL)RestoreTweetLabels;
@@ -69,7 +67,6 @@
 + (BOOL)restoreFollowButton;
 + (BOOL)squareAvatars;
 + (BOOL)restoreVideoTimestamp;
-+ (BOOL)dmAvatars;
 + (BOOL)classicTabBarEnabled;
 + (BOOL)restoreTabLabels;
 + (BOOL)noTabBarHiding;
@@ -80,13 +77,10 @@
 + (NSString *)translateAPIKey;
 + (NSString *)translateModel;
 
-+ (BOOL)dmComposeBarV2;
 + (BOOL)replySorting;
-+ (BOOL)dmVoiceCreation;
 
 + (void)clearSourceLabelCache;
 
 + (BOOL)restoreReplyContext;
-+ (BOOL)disableXChat;
 
 @end

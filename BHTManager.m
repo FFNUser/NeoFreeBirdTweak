@@ -254,12 +254,6 @@
 + (BOOL)noTabBarHiding {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"no_tab_bar_hiding"];
 }
-+ (BOOL)changeBackground {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"change_msg_background"];
-}
-+ (bool)backgroundImage {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"background_image"];
-}
 + (BOOL)hideBookmarkButton {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_bookmark_button"];
 }
@@ -305,10 +299,6 @@
 
 + (BOOL)restoreVideoTimestamp {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"restore_video_timestamp"];
-}
-
-+ (BOOL)dmAvatars {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"dm_avatars"];
 }
 
 + (BOOL)classicTabBarEnabled {
@@ -366,24 +356,12 @@
     return containsNonDigitsOnly;
 }
 
-+ (BOOL)dmComposeBarV2 {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"dm_compose_bar_v2_enabled"];
-}
-
 + (BOOL)replySorting {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"reply_sorting_enabled"];
 }
 
-+ (BOOL)dmVoiceCreation {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"dm_voice_creation_enabled"];
-}
-
 + (BOOL)restoreReplyContext {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"restore_reply_context"];
-}
-
-+ (BOOL)disableXChat {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"disable_xchat"];
 }
 
 @end

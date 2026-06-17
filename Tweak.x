@@ -483,7 +483,6 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_view_count"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_grok_analyze"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"restore_reply_context"];
-        [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"disable_xchat"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_topics"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_topics_to_follow"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_who_to_follow"];
@@ -624,32 +623,6 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
     for (T1TabView *tabView in self.tabViews) {
         if ([hiddenBars containsObject:tabView.scribePage]) {
             [tabView setHidden:true];
-        }
-    }
-}
-%end
-
-%hook T1DirectMessageConversationEntriesViewController
-- (void)viewDidLoad {
-    %orig;
-    if ([BHTManager changeBackground]) {
-        if ([BHTManager backgroundImage]) { // set the backgeound as image
-            NSFileManager *manager = [NSFileManager defaultManager];
-            NSString *DocPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, true).firstObject;
-            NSURL *imagePath = [[NSURL fileURLWithPath:DocPath] URLByAppendingPathComponent:@"msg_background.png"];
-
-            if ([manager fileExistsAtPath:imagePath.path]) {
-                UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:UIScreen.mainScreen.bounds];
-                backgroundImage.image = [UIImage imageNamed:imagePath.path];
-                [backgroundImage setContentMode:UIViewContentModeScaleAspectFill];
-                [self.view insertSubview:backgroundImage atIndex:0];
-            }
-        }
-
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"background_color"]) { // set the backgeound as color
-            NSString *hexCode = [[NSUserDefaults standardUserDefaults] objectForKey:@"background_color"];
-            UIColor *selectedColor = [UIColor colorFromHexString:hexCode];
-            self.view.backgroundColor = selectedColor;
         }
     }
 }
@@ -1647,10 +1620,6 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
         return ![BHTManager disableArticles];
     }
 
-    if ([key isEqualToString:@"ios_dm_dash_enabled"]) {
-        return ![BHTManager disableXChat];
-    }
-
     if ([key isEqualToString:@"highlights_tweets_tab_ui_enabled"]) {
         return ![BHTManager disableHighlights];
     }
@@ -1671,16 +1640,8 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
         return ![BHTManager OldStyle];
     }
 
-    if ([key isEqualToString:@"dm_compose_bar_v2_enabled"]) {
-        return ![BHTManager dmComposeBarV2];
-    }
-
     if ([key isEqualToString:@"reply_sorting_enabled"]) {
         return ![BHTManager replySorting];
-    }
-
-    if ([key isEqualToString:@"dm_voice_creation_enabled"]) {
-        return ![BHTManager dmVoiceCreation];
     }
 
     if ([key isEqualToString:@"ios_tweet_detail_overflow_in_navigation_enabled"]) {
@@ -1803,9 +1764,6 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
 %end
 
 %hook TFNTwitterAccount
-- (_Bool)isXChatEnabled {
-    return [BHTManager disableXChat] ? false : %orig;
-}
 - (_Bool)isEditProfileUsernameEnabled {
     return true;
 }
@@ -4114,31 +4072,6 @@ static char kManualRefreshInProgressKey;
         playerToTimestampMap = [NSMapTable weakToStrongObjectsMapTable];
     });
 }
-
-// MARK: - DM Avatar Images
-%hook T1DirectMessageEntryViewModel
-- (BOOL)shouldShowAvatarImage {
-    if (![BHTManager dmAvatars]) {
-        return %orig;
-    }
-
-    if (self.isOutgoingMessage) {
-        return NO; // Don't show avatar for your own messages
-    }
-    // For incoming messages, only show avatar if it's the last message in a group from that sender
-    return [[self valueForKey:@"lastEntryInGroup"] boolValue];
-}
-
-- (BOOL)isAvatarImageEnabled {
-    if (![BHTManager dmAvatars]) {
-        return %orig;
-    }
-
-    // Always return YES so that space is allocated for the avatar,
-    // allowing shouldShowAvatarImage to control actual visibility.
-    return YES;
-}
-%end
 
 // MARK: - Classic Tab Bar Icon Theming
 %hook T1TabView
