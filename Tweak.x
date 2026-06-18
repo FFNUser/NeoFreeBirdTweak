@@ -1460,24 +1460,47 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
 
 // MARK: Timeline download
 
+static NSArray *BHT_inlineActionViewClassesForViewModel(NSArray *classes, id viewModel) {
+    if (![classes isKindOfClass:NSArray.class]) {
+        return classes;
+    }
+
+    NSMutableArray *newClasses = [classes mutableCopy];
+    Class downloadButtonClass = %c(BHDownloadInlineButton);
+
+    if ([BHTManager isVideoCell:viewModel] &&
+        [BHTManager DownloadingVideos] &&
+        downloadButtonClass &&
+        ![newClasses containsObject:downloadButtonClass]) {
+        [newClasses addObject:downloadButtonClass];
+    }
+
+    Class analyticsButtonClass = %c(TTAStatusInlineAnalyticsButton);
+    if (analyticsButtonClass &&
+        [newClasses containsObject:analyticsButtonClass] &&
+        [BHTManager hideViewCount]) {
+        [newClasses removeObject:analyticsButtonClass];
+    }
+
+    Class bookmarkButtonClass = %c(TTAStatusInlineBookmarkButton);
+    if (bookmarkButtonClass &&
+        [newClasses containsObject:bookmarkButtonClass] &&
+        [BHTManager hideBookmarkButton]) {
+        [newClasses removeObject:bookmarkButtonClass];
+    }
+
+    return [newClasses copy];
+}
+
+%hook T1StatusInlineActionsView
++ (NSArray *)_t1_inlineActionViewClassesForViewModel:(id)arg1 options:(NSUInteger)arg2 displayType:(NSUInteger)arg3 account:(id)arg4 {
+    return BHT_inlineActionViewClassesForViewModel(%orig, arg1);
+}
+%end
+
 %hook TTAStatusInlineActionsView
 + (NSArray *)_t1_inlineActionViewClassesForViewModel:(id)arg1 options:(NSUInteger)arg2 displayType:(NSUInteger)arg3 account:(id)arg4 {
-    NSArray *_orig = %orig;
-    NSMutableArray *newOrig = [_orig mutableCopy];
-
-    if ([BHTManager isVideoCell:arg1] && [BHTManager DownloadingVideos]) {
-        [newOrig addObject:%c(BHDownloadInlineButton)];
-    }
-
-    if ([newOrig containsObject:%c(TTAStatusInlineAnalyticsButton)] && [BHTManager hideViewCount]) {
-        [newOrig removeObject:%c(TTAStatusInlineAnalyticsButton)];
-    }
-
-    if ([newOrig containsObject:%c(TTAStatusInlineBookmarkButton)] && [BHTManager hideBookmarkButton]) {
-        [newOrig removeObject:%c(TTAStatusInlineBookmarkButton)];
-    }
-
-    return [newOrig copy];
+    return BHT_inlineActionViewClassesForViewModel(%orig, arg1);
 }
 %end
 

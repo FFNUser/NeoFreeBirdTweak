@@ -85,7 +85,9 @@
     return [NSString stringWithFormat:@"%@x%@", q.firstObject, q.lastObject];
 }
 + (BOOL)isVideoCell:(id <T1StatusViewModel>)model {
-    return model.isMediaEntityVideo || model.isGIF;
+    BOOL isMediaEntityVideo = [model respondsToSelector:@selector(isMediaEntityVideo)] && model.isMediaEntityVideo;
+    BOOL isGIF = [model respondsToSelector:@selector(isGIF)] && model.isGIF;
+    return isMediaEntityVideo || isGIF;
 }
 + (void)save:(NSURL *)url {
     [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{

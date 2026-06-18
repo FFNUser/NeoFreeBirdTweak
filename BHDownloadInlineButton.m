@@ -36,6 +36,50 @@ static void _bh_callSuperIfPossible(__unsafe_unretained id self,
     }
 }
 
+static NSUInteger BHSelectorArgumentCount(SEL selector) {
+    NSUInteger count = 0;
+    const char *name = sel_getName(selector);
+    while (*name) {
+        if (*name == ':') count++;
+        name++;
+    }
+    return count;
+}
+
+static NSString *BHMethodTypeEncodingForSelector(SEL selector) {
+    NSString *selectorName = NSStringFromSelector(selector);
+    NSString *returnType = @"@";
+
+    if ([selectorName hasPrefix:@"set"]) {
+        returnType = @"v";
+    } else if ([selectorName hasPrefix:@"is"] ||
+               [selectorName hasPrefix:@"can"] ||
+               [selectorName hasPrefix:@"has"] ||
+               [selectorName hasPrefix:@"should"]) {
+        returnType = @"B";
+    } else if ([selectorName containsString:@"Insets"]) {
+        returnType = [NSString stringWithUTF8String:@encode(UIEdgeInsets)];
+    } else if ([selectorName containsString:@"Size"]) {
+        returnType = [NSString stringWithUTF8String:@encode(CGSize)];
+    } else if ([selectorName containsString:@"Width"] ||
+               [selectorName containsString:@"Height"] ||
+               [selectorName containsString:@"Inset"] ||
+               [selectorName containsString:@"Spacing"]) {
+        returnType = @"d";
+    } else if ([selectorName containsString:@"Type"] ||
+               [selectorName containsString:@"Count"] ||
+               [selectorName containsString:@"Priority"] ||
+               [selectorName containsString:@"Visibility"]) {
+        returnType = @"Q";
+    }
+
+    NSMutableString *encoding = [NSMutableString stringWithFormat:@"%@@:", returnType];
+    for (NSUInteger idx = 0; idx < BHSelectorArgumentCount(selector); idx++) {
+        [encoding appendString:@"@"];
+    }
+    return encoding;
+}
+
 #pragma mark - BHDownloadInlineButton
 @interface BHDownloadInlineButton () <BHDownloadDelegate>
 @property (nonatomic, strong) JGProgressHUD *hud;
@@ -113,6 +157,22 @@ static void _bh_callSuperIfPossible(__unsafe_unretained id self,
 // Twitter asks subclasses (+ class) for a custom glyph via this selector.
 - (id)_t1_imageNamed:(id)name fitSize:(CGSize)size fillColor:(id)fill { return nil; }
 + (id)_t1_imageNamed:(id)name fitSize:(CGSize)size fillColor:(id)fill { return nil; }
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)selector {
+    NSMethodSignature *signature = [super methodSignatureForSelector:selector];
+    if (signature) return signature;
+
+    return [NSMethodSignature signatureWithObjCTypes:[BHMethodTypeEncodingForSelector(selector) UTF8String]];
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation {
+    NSUInteger returnLength = invocation.methodSignature.methodReturnLength;
+    if (returnLength == 0) return;
+
+    void *zeroReturn = calloc(1, returnLength);
+    [invocation setReturnValue:zeroReturn];
+    free(zeroReturn);
+}
 
 #pragma mark ••• Hit‑testing tweaks
 - (void)setTouchInsets:(UIEdgeInsets)insets {
