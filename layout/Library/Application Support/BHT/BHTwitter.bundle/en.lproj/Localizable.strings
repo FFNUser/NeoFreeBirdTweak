@@ -498,3 +498,6 @@
 
 "ATTESTATION_BYPASS_OPTION_TITLE" = "Bypass attestation";
 "ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "Spoof device attestation. May or may not work for any feature.";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "Reply in web view";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "Open the reply box in a web view to avoid attestation.";

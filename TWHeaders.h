@@ -248,6 +248,10 @@ static NSString *_lastCopiedURL;
 @property(nonatomic) __weak id <T1StatusInlineActionButtonDelegate> delegate;
 @end
 
+@interface TTAStatusInlineReplyButton : UIView
+@property(nonatomic) __weak id <T1StatusInlineActionButtonDelegate> delegate;
+@end
+
 @protocol TTACoreStatusViewEventHandler <NSObject>
 @end
 
@@ -408,6 +412,41 @@ static NSString *_lastCopiedURL;
 - (id)init;
 @end
 
+@interface TFNTwitter : NSObject
++ (instancetype)sharedTwitter;
+@property(readonly, nonatomic) NSArray *accounts;
+@end
+
+@interface T1HostViewController : UIViewController
++ (instancetype)sharedHostViewController;
+- (id)currentAccount;
+@end
+
+@interface T1BaseWebViewController : UIViewController
+- (instancetype)initWithURL:(NSURL *)url;
+- (instancetype)initWithAccount:(id)account;
+- (void)setRootURL:(NSURL *)url;
+- (void)setCurrentURL:(NSURL *)url;
+@property(nonatomic, readonly) NSURL *currentURL;
+@end
+
+@interface T1WebViewController : T1BaseWebViewController
+- (instancetype)initWithRootURL:(NSURL *)rootURL
+                        account:(id)account
+             shouldAuthenticate:(BOOL)shouldAuthenticate
+      shouldPresentAsNativePage:(BOOL)shouldPresentAsNativePage
+                   sourceStatus:(id)sourceStatus
+                scribeComponent:(id)scribeComponent
+               scribeParameters:(id)scribeParameters;
+@property(nonatomic, strong) id account;
+- (BOOL)doesURLResultTypeOpenInWebview:(long long)resultType;
+@end
+
+@interface UIViewController (TFNPresentation)
+- (void)tfn_dismissAnimated:(id)sender;
+- (void)tfn_presentFromViewController:(UIViewController *)viewController animated:(BOOL)animated;
+@end
+
 @interface TFSTwitterEntityURL : NSObject
 @property(readonly, copy, nonatomic) NSString *expandedURL;
 @end
@@ -532,7 +571,7 @@ typedef FLEXAlertAction * _Nonnull (^FLEXAlertActionHandler)(void(^handler)(NSAr
 static void BH_changeTwitterColor(NSInteger colorID) {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     TAEColorSettings *colorSettings = [objc_getClass("TAEColorSettings") sharedSettings];
-    
+
     [defaults setObject:@(colorID) forKey:@"T1ColorSettingsPrimaryColorOptionKey"];
     [colorSettings setPrimaryColorOption:colorID];
 }
@@ -543,7 +582,7 @@ static UIImage *BH_imageFromView(UIView *view) {
     [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:false];
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
+
     return img;
 }
 

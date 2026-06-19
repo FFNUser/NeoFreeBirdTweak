@@ -1379,6 +1379,191 @@ static void BHTApplyCopyButtonStyle(UIButton *copyButton, T1ProfileHeaderView *h
 
 // MARK: Save tweet as an image
 
+static id BHT_currentAccountFromController(UIViewController *controller) {
+    NSMutableSet<UIViewController *> *visitedControllers = [NSMutableSet set];
+    while (controller && ![visitedControllers containsObject:controller]) {
+        [visitedControllers addObject:controller];
+
+        if ([controller respondsToSelector:@selector(currentAccount)]) {
+            id account = ((id (*)(id, SEL))objc_msgSend)(controller, @selector(currentAccount));
+            if (account) {
+                return account;
+            }
+        }
+
+        controller = controller.parentViewController ?: controller.presentingViewController;
+    }
+
+    return nil;
+}
+
+static id BHT_accountForAuthenticatedWebView(void) {
+    Class hostClass = %c(T1HostViewController);
+    if ([hostClass respondsToSelector:@selector(sharedHostViewController)]) {
+        id host = [hostClass sharedHostViewController];
+        if ([host respondsToSelector:@selector(currentAccount)]) {
+            id account = [host currentAccount];
+            if (account) {
+                return account;
+            }
+        }
+    }
+
+    return nil;
+}
+
+static TFNTwitterStatus *BHT_statusFromObject(id object) {
+    if (!object) {
+        return nil;
+    }
+
+    if ([object isKindOfClass:%c(TFNTwitterStatus)]) {
+        return (TFNTwitterStatus *)object;
+    }
+
+    @try {
+        id tweet = [object valueForKey:@"tweet"];
+        if ([tweet isKindOfClass:%c(TFNTwitterStatus)]) {
+            return (TFNTwitterStatus *)tweet;
+        }
+    } @catch (__unused NSException *exception) {}
+
+    @try {
+        id status = [object valueForKey:@"status"];
+        if ([status isKindOfClass:%c(TFNTwitterStatus)]) {
+            return (TFNTwitterStatus *)status;
+        }
+    } @catch (__unused NSException *exception) {}
+
+    return nil;
+}
+
+static TFNTwitterStatus *BHT_statusFromTweetView(T1StatusCell *tweetView) {
+    @try {
+        return BHT_statusFromObject([tweetView valueForKey:@"viewModel"]);
+    } @catch (__unused NSException *exception) {}
+
+    return nil;
+}
+
+static const void *BHTKeepReplyInWebViewKey = &BHTKeepReplyInWebViewKey;
+
+static BOOL BHT_openAuthenticatedTweetWebView(NSString *statusID) {
+    if (statusID.length == 0) {
+        return NO;
+    }
+
+    NSString *urlString = [NSString stringWithFormat:@"https://x.com/intent/tweet?in_reply_to=%@", statusID];
+    NSURL *url = [NSURL URLWithString:urlString];
+    if (!url) {
+        return NO;
+    }
+
+    Class webViewControllerClass = %c(T1WebViewController);
+    SEL initSel = @selector(initWithRootURL:account:shouldAuthenticate:shouldPresentAsNativePage:sourceStatus:scribeComponent:scribeParameters:);
+    if (!webViewControllerClass || ![webViewControllerClass instancesRespondToSelector:initSel]) {
+        return NO;
+    }
+
+    id account = BHT_accountForAuthenticatedWebView();
+    if (!account) {
+        return NO;
+    }
+
+    UIViewController *presentingController = topMostController();
+    if (!presentingController) {
+        return NO;
+    }
+
+    T1WebViewController *webViewController =
+        [[webViewControllerClass alloc] initWithRootURL:url
+                                                account:account
+                                     shouldAuthenticate:YES
+                              shouldPresentAsNativePage:NO
+                                           sourceStatus:nil
+                                        scribeComponent:nil
+                                       scribeParameters:nil];
+    if (!webViewController) {
+        return NO;
+    }
+
+    // Mark this instance so our -doesURLResultTypeOpenInWebview: and -setCurrentURL:
+    // hooks know to keep the reply in-webview and auto-close it on /home.
+    objc_setAssociatedObject(webViewController, BHTKeepReplyInWebViewKey, @YES, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+    Class navigationControllerClass = NSClassFromString(@"T1WebNavigationController")
+        ?: %c(TFNNavigationController)
+        ?: UINavigationController.class;
+    UINavigationController *modalNavigationController = [[navigationControllerClass alloc] initWithRootViewController:webViewController];
+
+    [presentingController presentViewController:modalNavigationController animated:YES completion:nil];
+
+    return YES;
+}
+
+static T1StatusCell *BHT_tweetViewFromInlineActionsView(TTAStatusInlineActionsView *actionsView) {
+    if ([actionsView.superview isKindOfClass:%c(T1StandardStatusView)]) {
+        return (T1StatusCell *)[(T1StandardStatusView *)actionsView.superview eventHandler];
+    }
+
+    if ([actionsView.superview isKindOfClass:%c(T1TweetDetailsFocalStatusView)]) {
+        return (T1StatusCell *)[(T1TweetDetailsFocalStatusView *)actionsView.superview eventHandler];
+    }
+
+    if ([actionsView.superview isKindOfClass:%c(T1ConversationFocalStatusView)]) {
+        return (T1StatusCell *)[(T1ConversationFocalStatusView *)actionsView.superview eventHandler];
+    }
+
+    return nil;
+}
+
+%hook TTAStatusInlineReplyButton
+- (void)didTap {
+    if (![BHTManager replyInWebView]) {
+        return %orig;
+    }
+
+    id delegate = self.delegate;
+    if (![delegate isKindOfClass:%c(TTAStatusInlineActionsView)]) {
+        return %orig;
+    }
+
+    TTAStatusInlineActionsView *actionsView = (TTAStatusInlineActionsView *)delegate;
+    TFNTwitterStatus *status = BHT_statusFromTweetView(BHT_tweetViewFromInlineActionsView(actionsView));
+    if (!status) {
+        status = BHT_statusFromObject(actionsView.viewModel);
+    }
+
+    NSInteger statusID = status.statusID;
+    if (statusID <= 0) {
+        return %orig;
+    }
+
+    NSString *statusIDString = @(statusID).stringValue;
+    if (!BHT_openAuthenticatedTweetWebView(statusIDString)) {
+        return %orig;
+    }
+}
+%end
+
+%hook T1WebViewController
+- (BOOL)doesURLResultTypeOpenInWebview:(long long)resultType {
+    if (objc_getAssociatedObject(self, BHTKeepReplyInWebViewKey)) {
+        return YES;
+    }
+    return %orig;
+}
+
+- (void)setCurrentURL:(NSURL *)url {
+    %orig;
+    if (objc_getAssociatedObject(self, BHTKeepReplyInWebViewKey) && [url.path isEqualToString:@"/home"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+        });
+    }
+}
+%end
+
 %hook TTAStatusInlineShareButton
 - (void)didLongPressActionButton:(UILongPressGestureRecognizer *)gestureRecognizer {
     if ([BHTManager tweetToImage]) {

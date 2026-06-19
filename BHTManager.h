@@ -45,6 +45,7 @@
 + (BOOL)hideSpacesBar;
 + (BOOL)disableRTL;
 + (BOOL)alwaysOpenSafari;
++ (BOOL)replyInWebView;
 + (BOOL)hideWhoToFollow;
 + (BOOL)hideTopicsToFollow;
 + (BOOL)hideBlueVerified;

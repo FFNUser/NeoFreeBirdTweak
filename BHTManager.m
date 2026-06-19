@@ -223,6 +223,9 @@
 + (BOOL)alwaysOpenSafari {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"openInBrowser"];
 }
++ (BOOL)replyInWebView {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"reply_in_webview"];
+}
 + (BOOL)hideWhoToFollow {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_who_to_follow"];
 }
