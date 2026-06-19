@@ -497,6 +497,7 @@ static void batchSwizzlingOnClass(Class cls, NSArray<NSString*>*origSelectors, I
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_topics_to_follow"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"hide_who_to_follow"];
         [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"no_tab_bar_hiding"];
+				[[NSUserDefaults standardUserDefaults] setBool:true forKey:@"reply_in_webview"];
 
     }
     [BHTManager cleanCache];
@@ -1823,7 +1824,7 @@ static NSNumber *BHTFeatureSwitchOverrideValueForKey(NSString *key) {
         return nil;
     }
 
-    // HomeTopStrip / pinned tabs overrides
+    // Custom timelines overrides
     if ([key isEqualToString:@"ranked_following_home_timeline_tab_enabled"] ||
         [key isEqualToString:@"hometimeline_pinned_tabs_topics_enabled"] ||
         [key isEqualToString:@"hometimeline_pinned_tabs_generic_timelines_enabled"] ||
