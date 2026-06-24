@@ -9,8 +9,10 @@
 /*Alerts and popups*/
 "RESTART_REQUIRED_ALERT_TITLE" = "Redémarrage requis";
 "RESTART_REQUIRED_ALERT_MESSAGE" = "Vous devez redémarrer Twitter pour que ce changement prenne effet.";
-"RESTART_NOW_BUTTON_TITLE" = "Redémarrer maintenant";
 "MODERN_LAYOUT_RESTART_MESSAGE" = "Pour passer de la mise en page moderne à classique, vous devez redémarrer Twitter.";
+
+"RESET_COMPLETE_TITLE" = "Réinitialisation réussie";
+"BACKGROUND_RESET_MESSAGE" = "L'arrière-plan des messages a été réinitialisé par défaut.";
 
 "CONFIRM_ALERT_MESSAGE" = "Tu es sûr de vouloir faire ça ?";
 "YES_BUTTON_TITLE" = "Oui";
@@ -18,8 +20,53 @@
 "OK_BUTTON_TITLE" = "OK";
 "CANCEL_BUTTON_TITLE" = "Annuler";
 "SAVE_BUTTON_TITLE" = "Enregistrer";
+"RESTART_NOW_BUTTON_TITLE" = "Redémarrer maintenant";
+"NOT_NOW_BUTTON_TITLE" = "Pas maintenant";
+"CONTINUE_BUTTON_TITLE" = "Continuer";
 
 /*Main menu start*/
+
+/*Settings*/
+
+"MODERN_SETTINGS_LAYOUT_TITLE" = "Général";
+"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Personnalisez votre fil d'actualités avec des polices personnalisées, le thème de la barre de navigation et bien plus encore.";
+
+"MODERN_SETTINGS_MEDIA_TITLE" = "Photos et vidéos";
+"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Téléchargez des vidéos, activez les horodatages des vidéos et bien plus encore.";
+
+"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
+"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Profitez d'une expérience sans publicité et débloquez les fonctionnalités Blue comme l'annulation de Tweet, les thèmes et les icônes d'application personnalisées.";
+
+"MODERN_SETTINGS_PROFILES_TITLE" = "Profils";
+"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Choisissez ce que vous voyez sur les profils des utilisateurs.";
+
+"MODERN_SETTINGS_TWEETS_TITLE" = "Tweets et réponses";
+"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Modifiez l'apparence des Tweets et supprimez les fonctionnalités inutilisées.";
+
+"MODERN_SETTINGS_MESSAGES_TITLE" = "Messages";
+"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Personnalisez votre expérience de messagerie sur Twitter.";
+
+"MODERN_SETTINGS_SEARCH_TITLE" = "Recherche et découverte";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "Modifiez ce que vous voyez dans l'onglet Recherche.";
+
+"MODERN_SETTINGS_PRESETS_TITLE" = "Préréglages";
+"MODERN_SETTINGS_PRESETS_SUBTITLE" = "Appliquez un ensemble de paramètres préconfigurés, ou exportez et importez les vôtres.";
+
+"MODERN_SETTINGS_WEB_TITLE" = "Web et liens";
+"MODERN_SETTINGS_WEB_SUBTITLE" = "Ajustez le comportement des liens et du navigateur intégré de Twitter.";
+
+"MODERN_SETTINGS_BRANDING_TITLE" = "Identité de marque";
+"MODERN_SETTINGS_BRANDING_SUBTITLE" = "Ajustez la visibilité de la marque de Twitter.";
+
+"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Laboratoires";
+"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Essayez des fonctionnalités que nous testons actuellement.";
+
+"MODERN_SETTINGS_DEBUG_TITLE" = "Débogage";
+"MODERN_SETTINGS_DEBUG_SUBTITLE" = "Découvrez pourquoi quelque chose ne fonctionne pas.";
+
+"COOL_KIDS_SECTION_HEADER_TITLE" = "Enfants cool";
+"SPECIAL_THANKS_SECTION_HEADER_TITLE" = "Remerciements spéciaux";
+"FOLLOW_OFFICIAL_PAGE_SECTION_HEADER_TITLE" = "Suivre NeoFreeBird";
 
 /*General*/
 "MAIN_SECTION_HEADER_TITLE" = "Général";
@@ -38,6 +85,9 @@
 
 "PADLOCK_OPTION_TITLE" = "Verrouiller Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Nécessite Face ID ou un code pour ouvrir Twitter.";
+
+"NEW_INAPP_WEB_OPTION_TITLE" = "Navigateur intégré amélioré (bêta)";
+"NEW_INAPP_WEB_DETAIL_TITLE" = "Utilisez le nouveau navigateur intégré de Twitter pour ouvrir des liens.";
 
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Utiliser navigateur externe";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Ouvre les liens dans Safari ou ton navigateur par défaut.";
@@ -68,6 +118,9 @@
 "TWEET_CONFIRM_OPTION_TITLE" = "Confirmer les Tweets";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Demande confirmation avant de publier.";
 
+"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Masquer les badges de vérification Blue";
+"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Masquer le badge de vérification payant sur les Tweets. Cela n'inclut pas les comptes de marques ou gouvernementaux.";
+
 "HIDE_VIEW_COUNT_OPTION_TITLE" = "Masquer les vues";
 "HIDE_VIEW_COUNT_OPTION_DETAIL_TITLE" = "N'affiche pas le nombre de vues sous les Tweets.";
 
@@ -75,6 +128,9 @@
 "HIDE_MARKBOOK_BUTTON_OPTION_DETAIL_TITLE" = "Supprime le bouton de favoris.";
 
 "DISABLE_SENSITIVE_TWEET_WARNINGS_OPTION_TITLE" = "Pas d'avertissements de contenu sensible";
+
+"BYPASS_AGE_VERIFICATION_OPTION_TITLE" = "Contourner la vérification de l'âge";
+"BYPASS_AGE_VERIFICATION_OPTION_DETAIL_TITLE" = "Passe l'étape de vérification de l'âge pour le contenu sensible.";
 
 "HIDE_GROK_ANALYZE_BUTTON_TITLE" = "Masquer le bouton Grok Analyze";
 "HIDE_GROK_ANALYZE_BUTTON_DETAIL_TITLE" = "Masquer le bouton Grok Analyze dans les Tweets.";
@@ -153,13 +209,13 @@
 "AUTO_HIGHEST_LOAD_OPTION_TITLE" = "Qualité max";
 "AUTO_HIGHEST_LOAD_OPTION_DETAIL_TITLE" = "Upload et lecture en meilleure qualité possible.";
 
-
 "DISABLE_VIDEO_LAYER_CAPTIONS_OPTION_TITLE" = "Pas de sous-titres vidéo";
 
 "FORCE_TWEET_FULL_FRAME_TITLE" = "Images larges";
 
 "RESTORE_VIDEO_TIMESTAMP_TITLE" = "Horodatage vidéo";
 "RESTORE_VIDEO_TIMESTAMP_DETAIL_TITLE" = "Affiche l'horodatage dans le lecteur immersif.";
+
 
 /*Twitter Blue*/
 "TWITTER_BLUE_SECTION_HEADER_TITLE" = "Twitter Blue";
@@ -175,7 +231,7 @@
 "READER_MODE_OPTION_DETAIL_TITLE" = "Lis les threads longs plus facilement.";
 
 "MEDIA_UPLOAD_4K_ENABLED_OPTION_TITLE" = "Téléversement 4K";
-"MEDIA_UPLOAD_4K_ENABLED_OPTION_DETAIL_TITLE" = "Téléverser des photos et vidéos en 4K.";
+"MEDIA_UPLOAD_4K_ENABLED_OPTION_DETAIL_TITLE" = "Téléverser des photos et vidéos in 4K.";
 
 "DOWNLOAD_VIDEOS_OPTION_TITLE" = "Télécharger les médias";
 "DOWNLOAD_VIDEOS_OPTION_DETAIL_TITLE" = "Sauvegarde vidéos et GIFs directement.";
@@ -206,6 +262,12 @@
 
 "STOP_HIDING_TAB_BAR_TITLE" = "Toujours afficher la barre";
 "STOP_HIDING_TAB_BAR_DETAIL_TITLE" = "Ne pas cacher la barre au scroll.";
+
+"HIDE_CUSTOM_TIMELINES_OPTION_TITLE" = "Masquer les fils personnalisés";
+"HIDE_CUSTOM_TIMELINES_OPTION_DETAIL_TITLE" = "Supprime le bouton d'ajout des onglets de fil d'actualité. Redémarrage requis.";
+
+"HIDE_TRENDS_OPTION_TITLE" = "Masquer le contenu tendance";
+"HIDE_TRENDS_OPTION_DETAIL_TITLE" = "Affiche uniquement la barre de recherche sur l'onglet Explorer, en masquant les tendances, actualités et onglets.";
 
 "CLASSIC_TAB_BAR_SETTINGS_TITLE" = "Barre de navigation classique";
 "CLASSIC_TAB_BAR_SETTINGS_DETAIL" = "Applique votre couleur d'accent à l'élément de navigation sélectionné.";
@@ -307,6 +369,7 @@
 "CUSTOM_TAB_BAR_MESSAGES" = "Messages";
 "CUSTOM_TAB_BAR_GROK" = "Grok";
 "CUSTOM_TAB_BAR_VIDEO" = "Vidéo";
+"CUSTOM_TAB_BAR_PROFILE" = "Profil";
 "CUSTOM_TAB_BAR_SECTION_1_TITLE" = "Activés";
 "CUSTOM_TAB_BAR_SECTION_2_TITLE" = "Désactivés";
 "CUSTOM_TAB_BAR_RESET_BUTTON" = "Restaurer les paramètres par défaut";
@@ -330,6 +393,36 @@
 /*Refresh pill text*/
 "REFRESH_PILL_TEXT" = "Tweeté";
 
+"NOTIF_REPLACE_POST_WITH_TWEET_OPTION_TITLE" = "Remplacer 'Post' par 'Tweet' dans les notifications";
+"NOTIF_REPLACE_POST_WITH_TWEET_DETAIL_TITLE" = "Remplace 'Post' par 'Tweet' dans le volet des notifications. Cela affecte tous les textes des notifications.";
+
+"COLOR_TWITTER_ICON_OPTION_TITLE" = "Colorer l'icône Twitter";
+"COLOR_TWITTER_ICON_DETAIL_TITLE" = "Applique la couleur d'accentuation à l'icône Twitter dans la barre supérieure.";
+
+"REFRESH_PILL_OPTION_TITLE" = "Ajouter 'Tweeté' à la pilule de rafraîchissement";
+"REFRESH_PILL_DETAIL_TITLE" = "Rajoute le libellé 'Tweeté' à la pilule de rafraîchissement quand quelqu'un Tweete.";
+
+/*Presets*/
+
+"PRESETS_IMPORT_SUCCESS_TITLE" = "Importation réussie";
+"PRESETS_IMPORT_SUCCESS_MESSAGE" = "Votre préréglage a été importé avec succès.";
+
+"PRESETS_IMPORT_FAILURE_TITLE" = "Échec de l'importation";
+"PRESETS_IMPORT_FAILURE_MESSAGE" = "Le fichier de préréglage est invalide ou corrompu.";
+
+"PRESETS_EXPORT_SUCCESS_TITLE" = "Exportation réussie";
+"PRESETS_EXPORT_SUCCESS_MESSAGE" = "Votre préréglage a été exporté avec succès.";
+
+"PRESETS_EXPORT_FAILURE_TITLE" = "Échec de l'exportation";
+"PRESETS_EXPORT_FAILURE_MESSAGE" = "Une erreur est survenue lors de l'exportation de votre préréglage.";
+
+"PRESETS_APPLY_SUCCESS_TITLE" = "Préréglage appliqué";
+"PRESETS_APPLY_SUCCESS_MESSAGE" = "Le préréglage a été appliqué avec succès.";
+
+"PRESETS_APPLY_FAILURE_TITLE" = "Impossible d'appliquer le préréglage";
+"PRESETS_APPLY_FAILURE_MESSAGE" = "Une erreur est survenue lors de l'application du préréglage.";
+
+
 /*Deprecated*/
 "TRUSTED_FRIENDS_OPTION_TITLE" = "Cercles Twitter";
 
@@ -348,35 +441,69 @@
 "VOICE_OPTION_TITLE" = "Tweets vocaux";
 "VOICE_OPTION_DETAIL_TITLE" = "Active ou désactive les Tweets vocaux (iOS uniquement).";
 
-/*Modern Settings Layout*/
-
-"MODERN_SETTINGS_LAYOUT_TITLE" = "Général";
-"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Personnalisez votre fil avec des polices, couleurs et plus encore.";
-
-"MODERN_SETTINGS_MEDIA_TITLE" = "Médias";
-"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Téléchargez des vidéos, activez les horodatages, etc.";
-
-"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
-"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Profitez d'une expérience sans pub et de fonctions Blue comme Annuler le tweet, les thèmes et les icônes personnalisées.";
-
-"MODERN_SETTINGS_PROFILES_TITLE" = "Profil";
-"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Modifiez ce que vous voyez dans les profils.";
-
-"MODERN_SETTINGS_TWEETS_TITLE" = "Tweets et réponses";
-"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Modifiez le fonctionnement des Tweets et désactivez les fonctions inutiles.";
-
-"MODERN_SETTINGS_MESSAGES_TITLE" = "Messages";
-"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Personnalisez votre expérience de messagerie Twitter.";
-
-"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Expérimental";
-"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Essayez des fonctionnalités instables.";
-
 "MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Rien à voir ici — pour le moment.";
+"MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "Cette section sera bientôt disponible. Restez à l'écoute pour de nouvelles fonctionnalités de NeoFreeBird !";
 
-"NEW_INAPP_WEB_OPTION_TITLE" = "Navigateur intégré amélioré (bêta)";
-"NEW_INAPP_WEB_DETAIL_TITLE" = "Utilisez le nouveau navigateur intégré de Twitter pour ouvrir des liens.";
-"CUSTOM_TAB_BAR_PROFILE" = "Profil";
-"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Masquer les badges de vérification Blue";
-"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Masquer le badge de vérification payant sur les Tweets. Cela n'inclut pas les comptes de marques ou gouvernementaux.";
+"SOURCE_UNAVAILABLE" = "Source non disponible";
 
-"COOL_KIDS_SECTION_HEADER_TITLE" = "Enfants cool";
+"notif_reposted_your_post_old" = "a repartagé votre publication";
+"notif_reposted_your_Post_old" = "a repartagé votre publication";
+"notif_Reposted_your_post_old" = "A repartagé votre publication";
+"notif_Reposted_your_Post_old" = "A repartagé votre publication";
+
+"notif_retweeted_your_tweet_new" = "a retweeté votre Tweet";
+"notif_retweeted_your_Tweet_new" = "a retweeté votre Tweet";
+"notif_Retweeted_your_Tweet_new" = "A retweeté votre Tweet";
+
+"notif_your_post_old" = "votre publication";
+"notif_your_Post_old" = "votre publication";
+"notif_your_tweet_new" = "votre Tweet";
+"notif_your_Tweet_new" = "votre Tweet";
+
+"notif_a_post_old" = "une publication";
+"notif_a_Post_old" = "une publication";
+"notif_a_tweet_new" = "un Tweet";
+"notif_a_Tweet_new" = "un Tweet";
+
+"notif_new_post_old" = "nouvelle publication";
+"notif_new_Post_old" = "nouvelle publication";
+"notif_new_tweet_new" = "nouveau Tweet";
+"notif_new_Tweet_new" = "nouveau Tweet";
+
+"notif_New_post_old" = "Nouvelle publication";
+"notif_New_Post_old" = "Nouvelle publication";
+"notif_New_tweet_new" = "Nouveau Tweet";
+"notif_New_Tweet_new" = "Nouveau Tweet";
+
+"notif_recent_post_old" = "publication récente";
+"notif_recent_Post_old" = "publication récente";
+"notif_recent_tweet_new" = "Tweet récent";
+"notif_recent_Tweet_new" = "Tweet récent";
+
+"notif_Recent_post_old" = "Publication récente";
+"notif_Recent_Post_old" = "Publication récente";
+"notif_Recent_tweet_new" = "Tweet récent";
+"notif_Recent_Tweet_new" = "Tweet récent";
+
+"notif_reposted_old" = "repartagé";
+"notif_Reposted_old" = "Repartagé";
+"notif_retweeted_new" = "retweeté";
+"notif_Retweeted_new" = "Retweeté";
+
+"notif_pinned_Post_old" = "Nouvelle publication épinglée";
+"notif_pinned_Tweet_new" = "Nouveau Tweet épinglé";
+
+"notif_your_Posts_old" = "vos publications";
+"notif_your_Tweets_new" = "vos Tweets";
+
+"notif_repost_old" = "repartager";
+"notif_retweet_new" = "retweet";
+
+"notif_Repost_old" = "Repartager";
+"notif_Retweet_new" = "Retweet";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "Contourner l'attestation";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "Simuler l'attestation de l'appareil. Peut ou non fonctionner pour certaines fonctionnalités.";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "Répondre en vue Web";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "IPA créée par @iosdecrypted. Ouvre la boîte de réponse dans une vue Web pour éviter l'attestation.";

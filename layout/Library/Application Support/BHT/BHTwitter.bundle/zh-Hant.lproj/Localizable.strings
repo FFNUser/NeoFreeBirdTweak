@@ -492,3 +492,9 @@
 
 "notif_Repost_old" = "轉發";
 "notif_Retweet_new" = "轉推";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "繞過認證";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "模擬設備認證。某些功能可能有效，也可能無效。";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "在網頁視圖中回覆";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "由 @iosdecrypted 製作的 IPA。在網頁視圖中打開回覆框以避免認證。";

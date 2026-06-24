@@ -9,8 +9,10 @@
 /*Alerts and popups*/
 "RESTART_REQUIRED_ALERT_TITLE" = "Perlu Mulai Ulang";
 "RESTART_REQUIRED_ALERT_MESSAGE" = "Anda perlu memulai ulang Twitter agar perubahan ini berlaku.";
-"RESTART_NOW_BUTTON_TITLE" = "Mulai Ulang Sekarang";
 "MODERN_LAYOUT_RESTART_MESSAGE" = "Untuk beralih antara tata letak modern dan klasik, Anda perlu memulai ulang Twitter.";
+
+"RESET_COMPLETE_TITLE" = "Reset Berhasil";
+"BACKGROUND_RESET_MESSAGE" = "Latar belakang Pesan telah disetel ulang ke default.";
 
 "CONFIRM_ALERT_MESSAGE" = "Yakin mau melakukan itu?";
 "YES_BUTTON_TITLE" = "Ya";
@@ -18,8 +20,53 @@
 "OK_BUTTON_TITLE" = "OK";
 "CANCEL_BUTTON_TITLE" = "Batal";
 "SAVE_BUTTON_TITLE" = "Simpan";
+"RESTART_NOW_BUTTON_TITLE" = "Mulai Ulang";
+"NOT_NOW_BUTTON_TITLE" = "Jangan Sekarang";
+"CONTINUE_BUTTON_TITLE" = "Lanjutkan";
 
 /*Main menu start*/
+
+/*Settings*/
+
+"MODERN_SETTINGS_LAYOUT_TITLE" = "Umum";
+"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Jadikan linimasa benar-benar milik Anda dengan font khusus, tema bilah navigasi, dan banyak lagi.";
+
+"MODERN_SETTINGS_MEDIA_TITLE" = "Foto dan video";
+"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Unduh video, aktifkan penanda waktu video, dan lainnya.";
+
+"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
+"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Dapatkan pengalaman bebas iklan dan buka kunci fitur Blue seperti Urungkan Tweet, tema, dan ikon aplikasi khusus.";
+
+"MODERN_SETTINGS_PROFILES_TITLE" = "Profil";
+"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Pilih apa yang Anda lihat di profil pengguna.";
+
+"MODERN_SETTINGS_TWEETS_TITLE" = "Tweet dan balasan";
+"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Ubah tampilan Tweet dan hapus fitur yang tidak Anda gunakan.";
+
+"MODERN_SETTINGS_MESSAGES_TITLE" = "Pesan";
+"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Sesuaikan pengalaman perpesanan Twitter Anda.";
+
+"MODERN_SETTINGS_SEARCH_TITLE" = "Cari dan temukan";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "Ubah apa yang Anda lihat di tab Cari.";
+
+"MODERN_SETTINGS_PRESETS_TITLE" = "Preset";
+"MODERN_SETTINGS_PRESETS_SUBTITLE" = "Terapkan serangkaian pengaturan yang telah dikonfigurasi sebelumnya, atau ekspor dan impor milik Anda sendiri.";
+
+"MODERN_SETTINGS_WEB_TITLE" = "Web dan tautan";
+"MODERN_SETTINGS_WEB_SUBTITLE" = "Sesuaikan perilaku tautan dan browser dalam aplikasi Twitter.";
+
+"MODERN_SETTINGS_BRANDING_TITLE" = "Merek";
+"MODERN_SETTINGS_BRANDING_SUBTITLE" = "Sesuaikan seberapa banyak perubahan merek Twitter yang ingin Anda lihat.";
+
+"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Laboratorium";
+"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Cobalah fitur yang sedang kami uji saat ini.";
+
+"MODERN_SETTINGS_DEBUG_TITLE" = "Debug";
+"MODERN_SETTINGS_DEBUG_SUBTITLE" = "Cari tahu mengapa sesuatu tidak berfungsi.";
+
+"COOL_KIDS_SECTION_HEADER_TITLE" = "Anak keren";
+"SPECIAL_THANKS_SECTION_HEADER_TITLE" = "Terima kasih khusus";
+"FOLLOW_OFFICIAL_PAGE_SECTION_HEADER_TITLE" = "Ikuti NeoFreeBird";
 
 /*General*/
 "MAIN_SECTION_HEADER_TITLE" = "Umum";
@@ -38,6 +85,9 @@
 
 "PADLOCK_OPTION_TITLE" = "Kunci Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Butuh Face ID atau kode untuk membuka Twitter.";
+
+"NEW_INAPP_WEB_OPTION_TITLE" = "Browser dalam aplikasi yang ditingkatkan (beta)";
+"NEW_INAPP_WEB_DETAIL_TITLE" = "Gunakan browser dalam aplikasi baru Twitter untuk membuka tautan.";
 
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Gunakan browser eksternal";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Buka tautan di Safari atau browser default.";
@@ -68,6 +118,9 @@
 "TWEET_CONFIRM_OPTION_TITLE" = "Konfirmasi Tweet";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Tanya dulu sebelum nge-Tweet.";
 
+"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Sembunyikan lencana verifikasi Blue";
+"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Sembunyikan lencana verifikasi berbayar pada Tweet. Ini tidak termasuk akun merek atau pemerintah.";
+
 "HIDE_VIEW_COUNT_OPTION_TITLE" = "Sembunyikan jumlah tampilan";
 "HIDE_VIEW_COUNT_OPTION_DETAIL_TITLE" = "Jangan tampilkan jumlah tayangan di bawah Tweet.";
 
@@ -75,6 +128,9 @@
 "HIDE_MARKBOOK_BUTTON_OPTION_DETAIL_TITLE" = "Hapus tombol bookmark dari Tweet.";
 
 "DISABLE_SENSITIVE_TWEET_WARNINGS_OPTION_TITLE" = "Tanpa peringatan konten sensitif";
+
+"BYPASS_AGE_VERIFICATION_OPTION_TITLE" = "Lewati Verifikasi Usia";
+"BYPASS_AGE_VERIFICATION_OPTION_DETAIL_TITLE" = "Melewati alur verifikasi usia untuk konten sensitif.";
 
 "HIDE_GROK_ANALYZE_BUTTON_TITLE" = "Sembunyikan Tombol Analisis Grok";
 "HIDE_GROK_ANALYZE_BUTTON_DETAIL_TITLE" = "Sembunyikan tombol Grok Analyze di Tweet.";
@@ -153,13 +209,13 @@
 "AUTO_HIGHEST_LOAD_OPTION_TITLE" = "Media kualitas tinggi";
 "AUTO_HIGHEST_LOAD_OPTION_DETAIL_TITLE" = "Unggah dan tampilkan media dalam kualitas terbaik.";
 
-
 "DISABLE_VIDEO_LAYER_CAPTIONS_OPTION_TITLE" = "Tanpa subtitle video";
 
 "FORCE_TWEET_FULL_FRAME_TITLE" = "Gambar besar";
 
 "RESTORE_VIDEO_TIMESTAMP_TITLE" = "Penanda Waktu Video";
 "RESTORE_VIDEO_TIMESTAMP_DETAIL_TITLE" = "Menampilkan penanda waktu pada pemutar penuh.";
+
 
 /*Twitter Blue*/
 "TWITTER_BLUE_SECTION_HEADER_TITLE" = "Twitter Blue";
@@ -206,6 +262,12 @@
 
 "STOP_HIDING_TAB_BAR_TITLE" = "Tampilkan tab bar terus";
 "STOP_HIDING_TAB_BAR_DETAIL_TITLE" = "Jangan sembunyikan tab saat digulir.";
+
+"HIDE_CUSTOM_TIMELINES_OPTION_TITLE" = "Sembunyikan linimasa khusus";
+"HIDE_CUSTOM_TIMELINES_OPTION_DETAIL_TITLE" = "Menghapus tombol Tambah dari tab linimasa beranda. Diperlukan mulai ulang.";
+
+"HIDE_TRENDS_OPTION_TITLE" = "Sembunyikan konten tren";
+"HIDE_TRENDS_OPTION_DETAIL_TITLE" = "Tampilkan hanya bilah pencarian pada tab Jelajahi, menyembunyikan semua tren, berita, dan tab halaman.";
 
 "CLASSIC_TAB_BAR_SETTINGS_TITLE" = "Bilah Navigasi Klasik";
 "CLASSIC_TAB_BAR_SETTINGS_DETAIL" = "Terapkan warna aksen Anda ke item navigasi yang dipilih.";
@@ -282,8 +344,8 @@
 /*Copy profile info*/
 "COPY_PROFILE_INFO_MENU_OPTION_1" = "Salin bio";
 "COPY_PROFILE_INFO_MENU_OPTION_2" = "Salin username";
-"COPY_PROFILE_INFO_MENU_OPTION_3" = "Salin username lengkap";
-"COPY_PROFILE_INFO_MENU_OPTION_4" = "Salin link bio";
+"COPY_PROFILE_INFO_MENU_OPTION_3" = "Salin nama";
+"COPY_PROFILE_INFO_MENU_OPTION_4" = "Salin situs web";
 "COPY_PROFILE_INFO_MENU_OPTION_5" = "Salin lokasi";
 
 /*Theme*/
@@ -307,6 +369,7 @@
 "CUSTOM_TAB_BAR_MESSAGES" = "Pesan";
 "CUSTOM_TAB_BAR_GROK" = "Grok";
 "CUSTOM_TAB_BAR_VIDEO" = "Video";
+"CUSTOM_TAB_BAR_PROFILE" = "Profil";
 "CUSTOM_TAB_BAR_SECTION_1_TITLE" = "Aktif";
 "CUSTOM_TAB_BAR_SECTION_2_TITLE" = "Nonaktif";
 "CUSTOM_TAB_BAR_RESET_BUTTON" = "Kembalikan ke Default";
@@ -330,6 +393,36 @@
 /*Refresh pill text*/
 "REFRESH_PILL_TEXT" = "Telah Di-tweet";
 
+"NOTIF_REPLACE_POST_WITH_TWEET_OPTION_TITLE" = "Pengganti Post ke Tweet di notifikasi";
+"NOTIF_REPLACE_POST_WITH_TWEET_DETAIL_TITLE" = "Mengganti 'Post' dengan 'Tweet' di panel notifikasi. Ini memengaruhi semua teks dalam notifikasi.";
+
+"COLOR_TWITTER_ICON_OPTION_TITLE" = "Warnai ikon Twitter";
+"COLOR_TWITTER_ICON_DETAIL_TITLE" = "Menerapkan warna aksen ke ikon Twitter di bilah atas.";
+
+"REFRESH_PILL_OPTION_TITLE" = "Tambahkan 'Di-tweet' ke bilah pembaruan";
+"REFRESH_PILL_DETAIL_TITLE" = "Menambahkan kembali label 'Di-tweet' ke bilah pembaruan saat seseorang men-tweet.";
+
+/*Presets*/
+
+"PRESETS_IMPORT_SUCCESS_TITLE" = "Impor Berhasil";
+"PRESETS_IMPORT_SUCCESS_MESSAGE" = "Preset Anda berhasil diimpor.";
+
+"PRESETS_IMPORT_FAILURE_TITLE" = "Impor Gagal";
+"PRESETS_IMPORT_FAILURE_MESSAGE" = "File preset tidak valid atau rusak.";
+
+"PRESETS_EXPORT_SUCCESS_TITLE" = "Ekspor Berhasil";
+"PRESETS_EXPORT_SUCCESS_MESSAGE" = "Preset Anda berhasil diekspor.";
+
+"PRESETS_EXPORT_FAILURE_TITLE" = "Ekspor Gagal";
+"PRESETS_EXPORT_FAILURE_MESSAGE" = "Terjadi kesalahan saat mengekspor preset Anda.";
+
+"PRESETS_APPLY_SUCCESS_TITLE" = "Preset Diterapkan";
+"PRESETS_APPLY_SUCCESS_MESSAGE" = "Preset berhasil diterapkan.";
+
+"PRESETS_APPLY_FAILURE_TITLE" = "Tidak Dapat Menerapkan Preset";
+"PRESETS_APPLY_FAILURE_MESSAGE" = "Terjadi kesalahan saat menerapkan preset.";
+
+
 /*Deprecated*/
 "TRUSTED_FRIENDS_OPTION_TITLE" = "Lingkaran Twitter";
 
@@ -348,35 +441,69 @@
 "VOICE_OPTION_TITLE" = "Tweet Suara";
 "VOICE_OPTION_DETAIL_TITLE" = "Aktifkan atau nonaktifkan Tweet Suara (hanya iOS).";
 
-/*Modern Settings Layout*/
-
-"MODERN_SETTINGS_LAYOUT_TITLE" = "Umum";
-"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Personalisasi linimasa Anda dengan font, warna navigasi, dan lainnya.";
-
-"MODERN_SETTINGS_MEDIA_TITLE" = "Media";
-"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Unduh video, aktifkan penanda waktu, dan lainnya.";
-
-"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
-"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Nikmati pengalaman bebas iklan dan fitur Blue seperti Urungkan Tweet, tema, dan ikon aplikasi khusus.";
-
-"MODERN_SETTINGS_PROFILES_TITLE" = "Profil";
-"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Ubah apa yang Anda lihat di profil.";
-
-"MODERN_SETTINGS_TWEETS_TITLE" = "Tweet dan Balasan";
-"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Ubah cara kerja tweet dan sembunyikan fitur yang tidak Anda gunakan.";
-
-"MODERN_SETTINGS_MESSAGES_TITLE" = "Pesan";
-"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Sesuaikan pengalaman perpesanan Twitter Anda.";
-
-"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Lab";
-"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Coba fitur yang belum stabil.";
-
 "MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Belum ada yang bisa dilihat di sini.";
+"MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "Bagian ini akan segera hadir. Tetap disini untuk fitur NeoFreeBird lainnya!";
 
-"NEW_INAPP_WEB_OPTION_TITLE" = "Browser dalam aplikasi yang ditingkatkan (beta)";
-"NEW_INAPP_WEB_DETAIL_TITLE" = "Gunakan browser dalam aplikasi baru Twitter untuk membuka tautan.";
-"CUSTOM_TAB_BAR_PROFILE" = "Profil";
-"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Sembunyikan lencana verifikasi Blue";
-"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Sembunyikan lencana verifikasi berbayar pada Tweet. Ini tidak termasuk akun merek atau pemerintah.";
+"SOURCE_UNAVAILABLE" = "Sumber Tidak Tersedia";
 
-"COOL_KIDS_SECTION_HEADER_TITLE" = "Anak keren";
+"notif_reposted_your_post_old" = "memposting ulang postingan Anda";
+"notif_reposted_your_Post_old" = "memposting ulang postingan Anda";
+"notif_Reposted_your_post_old" = "Memposting ulang postingan Anda";
+"notif_Reposted_your_Post_old" = "Memposting ulang postingan Anda";
+
+"notif_retweeted_your_tweet_new" = "meretweet tweet Anda";
+"notif_retweeted_your_Tweet_new" = "meretweet tweet Anda";
+"notif_Retweeted_your_Tweet_new" = "Meretweet tweet Anda";
+
+"notif_your_post_old" = "postingan Anda";
+"notif_your_Post_old" = "postingan Anda";
+"notif_your_tweet_new" = "tweet Anda";
+"notif_your_Tweet_new" = "tweet Anda";
+
+"notif_a_post_old" = "sebuah postingan";
+"notif_a_Post_old" = "sebuah postingan";
+"notif_a_tweet_new" = "sebuah tweet";
+"notif_a_Tweet_new" = "sebuah tweet";
+
+"notif_new_post_old" = "postingan baru";
+"notif_new_Post_old" = "postingan baru";
+"notif_new_tweet_new" = "tweet baru";
+"notif_new_Tweet_new" = "tweet baru";
+
+"notif_New_post_old" = "Postingan baru";
+"notif_New_Post_old" = "Postingan baru";
+"notif_New_tweet_new" = "Tweet baru";
+"notif_New_Tweet_new" = "Tweet baru";
+
+"notif_recent_post_old" = "postingan baru-baru ini";
+"notif_recent_Post_old" = "postingan baru-baru ini";
+"notif_recent_tweet_new" = "tweet baru-baru ini";
+"notif_recent_Tweet_new" = "tweet baru-baru ini";
+
+"notif_Recent_post_old" = "Postingan baru-baru ini";
+"notif_Recent_Post_old" = "Postingan baru-baru ini";
+"notif_Recent_tweet_new" = "Tweet baru-baru ini";
+"notif_Recent_Tweet_new" = "Tweet baru-baru ini";
+
+"notif_reposted_old" = "diposting ulang";
+"notif_Reposted_old" = "Diposting ulang";
+"notif_retweeted_new" = "diretweet";
+"notif_Retweeted_new" = "Diretweet";
+
+"notif_pinned_Post_old" = "Postingan tersemat baru";
+"notif_pinned_Tweet_new" = "Tweet tersemat baru";
+
+"notif_your_Posts_old" = "postingan Anda";
+"notif_your_Tweets_new" = "tweet Anda";
+
+"notif_repost_old" = "repost";
+"notif_retweet_new" = "retweet";
+
+"notif_Repost_old" = "Repost";
+"notif_Retweet_new" = "Retweet";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "Lewati Atestasi";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "Memalsukan atestasi perangkat. Mungkin tidak berfungsi untuk semua fitur.";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "Balas dalam Tampilan Web";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "IPA dibuat oleh @iosdecrypted. Buka kotak balasan dalam tampilan web untuk menghindari atestasi.";

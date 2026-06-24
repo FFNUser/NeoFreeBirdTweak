@@ -492,3 +492,10 @@
 
 "notif_Repost_old" = "Repost";
 "notif_Retweet_new" = "リツイート";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "認証を回避";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "デバイス認証を偽装します。機能によっては動作しない場合があります。";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "ウェブビューで返信";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "@iosdecrypted によって作成された IPA。認証を回避するためにウェブビューで返信ボックスを開きます。";
+

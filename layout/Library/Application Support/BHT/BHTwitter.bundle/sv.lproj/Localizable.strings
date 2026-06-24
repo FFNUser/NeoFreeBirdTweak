@@ -472,3 +472,10 @@
 
 "notif_Repost_old" = "Återpublicering";
 "notif_Retweet_new" = "Retweet";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "Kringgå attestering";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "Fejka enhetsattestering. Kanske fungerar eller inte fungerar för vissa funktioner.";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "Svara i webbvy";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "IPA skapad av @iosdecrypted. Öppna svarsrutan i en webbvy för att undvika attestering.";
+

@@ -9,8 +9,10 @@
 /*Alerts and popups*/
 "RESTART_REQUIRED_ALERT_TITLE" = "Potrebno ponovno pokretanje";
 "RESTART_REQUIRED_ALERT_MESSAGE" = "Morate ponovno pokrenuti Twitter da bi promjena stupila na snagu.";
-"RESTART_NOW_BUTTON_TITLE" = "Ponovno pokreni";
 "MODERN_LAYOUT_RESTART_MESSAGE" = "Za prelazak između modernog i klasičnog izgleda morate ponovno pokrenuti Twitter.";
+
+"RESET_COMPLETE_TITLE" = "Uspješno ponovno postavljanje";
+"BACKGROUND_RESET_MESSAGE" = "Pozadina poruka vraćena je na zadane vrijednosti.";
 
 "CONFIRM_ALERT_MESSAGE" = "Jesi li siguran da to želiš?";
 "YES_BUTTON_TITLE" = "Da";
@@ -18,8 +20,53 @@
 "OK_BUTTON_TITLE" = "U redu";
 "CANCEL_BUTTON_TITLE" = "Odustani";
 "SAVE_BUTTON_TITLE" = "Spremi";
+"RESTART_NOW_BUTTON_TITLE" = "Ponovno pokreni";
+"NOT_NOW_BUTTON_TITLE" = "Ne sada";
+"CONTINUE_BUTTON_TITLE" = "Nastavi";
 
 /*Main menu start*/
+
+/*Settings*/
+
+"MODERN_SETTINGS_LAYOUT_TITLE" = "Općenito";
+"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Prilagodite feed fontovima, bojama navigacije i još mnogo toga.";
+
+"MODERN_SETTINGS_MEDIA_TITLE" = "Fotografije i videozapisi";
+"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Preuzimajte videozapise, omogućite vremenske oznake i još mnogo toga.";
+
+"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
+"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Uživajte u iskustvu bez oglasa i otključajte značajke poput Poništi tweet, teme i prilagođene ikone.";
+
+"MODERN_SETTINGS_PROFILES_TITLE" = "Profili";
+"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Promijenite ono što vidite na profilima.";
+
+"MODERN_SETTINGS_TWEETS_TITLE" = "Tweetovi i odgovori";
+"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Prilagodite izgled tweetova i uklonite nepotrebne značajke.";
+
+"MODERN_SETTINGS_MESSAGES_TITLE" = "Poruke";
+"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Prilagodite svoje iskustvo razmjene poruka na Twitteru.";
+
+"MODERN_SETTINGS_SEARCH_TITLE" = "Traži i istraži";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "Promijenite ono što vidite na kartici Pretraživanje.";
+
+"MODERN_SETTINGS_PRESETS_TITLE" = "Predefinirane postavke";
+"MODERN_SETTINGS_PRESETS_SUBTITLE" = "Primijenite set predefiniranih postavki ili izvezite/uvezite vlastite.";
+
+"MODERN_SETTINGS_WEB_TITLE" = "Web i poveznice";
+"MODERN_SETTINGS_WEB_SUBTITLE" = "Podesite ponašanje poveznica i Twitterovog ugrađenog preglednika.";
+
+"MODERN_SETTINGS_BRANDING_TITLE" = "Brendiranje";
+"MODERN_SETTINGS_BRANDING_SUBTITLE" = "Podesite koliko starog Twitter brenda želite ponovno vidjeti.";
+
+"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Laboratorij";
+"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Isprobajte značajke koje trenutno testiramo.";
+
+"MODERN_SETTINGS_DEBUG_TITLE" = "Debug";
+"MODERN_SETTINGS_DEBUG_SUBTITLE" = "Saznajte zašto nešto ne radi.";
+
+"COOL_KIDS_SECTION_HEADER_TITLE" = "Cool djeca";
+"SPECIAL_THANKS_SECTION_HEADER_TITLE" = "Posebna zahvala";
+"FOLLOW_OFFICIAL_PAGE_SECTION_HEADER_TITLE" = "Pratite NeoFreeBird";
 
 /*General*/
 "MAIN_SECTION_HEADER_TITLE" = "Općenito";
@@ -38,6 +85,9 @@
 
 "PADLOCK_OPTION_TITLE" = "Zaključaj Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "Za otvaranje Twittera potreban je Face ID ili šifra.";
+
+"NEW_INAPP_WEB_OPTION_TITLE" = "Poboljšani preglednik u aplikaciji (beta)";
+"NEW_INAPP_WEB_DETAIL_TITLE" = "Koristite Twitterov novi preglednik u aplikaciji za otvaranje poveznica.";
 
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "Koristi vanjski preglednik";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "Otvaraj linkove u Safariju ili zadanim preglednicima.";
@@ -68,6 +118,9 @@
 "TWEET_CONFIRM_OPTION_TITLE" = "Potvrda tweeta";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "Zatraži potvrdu prije objave tweeta.";
 
+"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Sakrij Blue oznake provjere";
+"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Sakrij plaćenu oznaku provjere na Tweetovima. To ne uključuje račune brendova niti vladine račune.";
+
 "HIDE_VIEW_COUNT_OPTION_TITLE" = "Sakrij broj pregleda";
 "HIDE_VIEW_COUNT_OPTION_DETAIL_TITLE" = "Ne prikazuj broj pregleda ispod tweetova.";
 
@@ -75,6 +128,9 @@
 "HIDE_MARKBOOK_BUTTON_OPTION_DETAIL_TITLE" = "Ukloni gumb za spremanje tweetova.";
 
 "DISABLE_SENSITIVE_TWEET_WARNINGS_OPTION_TITLE" = "Bez upozorenja na osjetljiv sadržaj";
+
+"BYPASS_AGE_VERIFICATION_OPTION_TITLE" = "Zaobiđi verifikaciju dobi";
+"BYPASS_AGE_VERIFICATION_OPTION_DETAIL_TITLE" = "Preskače postupak provjere dobi za osjetljivi sadržaj.";
 
 "HIDE_GROK_ANALYZE_BUTTON_TITLE" = "Sakrij Grok gumb za analizu";
 "HIDE_GROK_ANALYZE_BUTTON_DETAIL_TITLE" = "Sakriva Grok Analyze gumb u tweetovima.";
@@ -153,13 +209,13 @@
 "AUTO_HIGHEST_LOAD_OPTION_TITLE" = "Visokokvalitetni mediji";
 "AUTO_HIGHEST_LOAD_OPTION_DETAIL_TITLE" = "Prenesi i gledaj medije u najboljoj kvaliteti.";
 
-
 "DISABLE_VIDEO_LAYER_CAPTIONS_OPTION_TITLE" = "Bez titlova u videozapisima";
 
 "FORCE_TWEET_FULL_FRAME_TITLE" = "Velike slike";
 
 "RESTORE_VIDEO_TIMESTAMP_TITLE" = "Vremenska oznaka videa";
 "RESTORE_VIDEO_TIMESTAMP_DETAIL_TITLE" = "Prikazuje vremensku oznaku u videu u punom prikazu.";
+
 
 /*Twitter Blue*/
 "TWITTER_BLUE_SECTION_HEADER_TITLE" = "Twitter Blue";
@@ -206,6 +262,12 @@
 
 "STOP_HIDING_TAB_BAR_TITLE" = "Uvijek prikazuj kartice";
 "STOP_HIDING_TAB_BAR_DETAIL_TITLE" = "Ne skrivaj traku kartica pri skrolanju.";
+
+"HIDE_CUSTOM_TIMELINES_OPTION_TITLE" = "Sakrij prilagođene vremenske linije";
+"HIDE_CUSTOM_TIMELINES_OPTION_DETAIL_TITLE" = "Uklanja gumb za dodavanje s kartica vremenske trake. Zahtijeva ponovno pokretanje.";
+
+"HIDE_TRENDS_OPTION_TITLE" = "Sakrij trending sadržaj";
+"HIDE_TRENDS_OPTION_DETAIL_TITLE" = "Prikaži samo traku za pretraživanje na kartici Istraži, skrivajući sve trendove, vijesti i kartice.";
 
 "CLASSIC_TAB_BAR_SETTINGS_TITLE" = "Klasična navigacijska traka";
 "CLASSIC_TAB_BAR_SETTINGS_DETAIL" = "Primjenjuje vašu naglašenu boju na trenutno odabranu stavku.";
@@ -282,8 +344,8 @@
 /*Copy profile info*/
 "COPY_PROFILE_INFO_MENU_OPTION_1" = "Kopiraj biografiju";
 "COPY_PROFILE_INFO_MENU_OPTION_2" = "Kopiraj korisničko ime";
-"COPY_PROFILE_INFO_MENU_OPTION_3" = "Kopiraj puno korisničko ime";
-"COPY_PROFILE_INFO_MENU_OPTION_4" = "Kopiraj poveznicu iz bio";
+"COPY_PROFILE_INFO_MENU_OPTION_3" = "Kopiraj ime";
+"COPY_PROFILE_INFO_MENU_OPTION_4" = "Kopiraj web stranicu";
 "COPY_PROFILE_INFO_MENU_OPTION_5" = "Kopiraj lokaciju";
 
 /*Theme*/
@@ -307,6 +369,7 @@
 "CUSTOM_TAB_BAR_MESSAGES" = "Poruke";
 "CUSTOM_TAB_BAR_GROK" = "Grok";
 "CUSTOM_TAB_BAR_VIDEO" = "Video";
+"CUSTOM_TAB_BAR_PROFILE" = "Profil";
 "CUSTOM_TAB_BAR_SECTION_1_TITLE" = "Aktivno";
 "CUSTOM_TAB_BAR_SECTION_2_TITLE" = "Neaktivno";
 "CUSTOM_TAB_BAR_RESET_BUTTON" = "Vrati na zadano";
@@ -330,6 +393,36 @@
 /*Refresh pill text*/
 "REFRESH_PILL_TEXT" = "Tweetano";
 
+"NOTIF_REPLACE_POST_WITH_TWEET_OPTION_TITLE" = "Zamjena 'Objava' s 'Tweet' u obavijestima";
+"NOTIF_REPLACE_POST_WITH_TWEET_DETAIL_TITLE" = "Zamjenjuje 'Objava' s 'Tweet' na ploči s obavijestima. Ovo utječe na sav tekst u obavijestima.";
+
+"COLOR_TWITTER_ICON_OPTION_TITLE" = "Oboji Twitter ikonu";
+"COLOR_TWITTER_ICON_DETAIL_TITLE" = "Primjenjuje naglašenu boju na Twitter ikonu u gornjoj traci.";
+
+"REFRESH_PILL_OPTION_TITLE" = "Dodaj 'Tweetano' na traku za osvježavanje";
+"REFRESH_PILL_DETAIL_TITLE" = "Vraća oznaku 'Tweetano' na traku za osvježavanje kada netko objavi Tweet.";
+
+/*Presets*/
+
+"PRESETS_IMPORT_SUCCESS_TITLE" = "Uvoz uspješan";
+"PRESETS_IMPORT_SUCCESS_MESSAGE" = "Vaša predefinirana postavka je uspješno uvezena.";
+
+"PRESETS_IMPORT_FAILURE_TITLE" = "Uvoz nije uspio";
+"PRESETS_IMPORT_FAILURE_MESSAGE" = "Datoteka predefiniranih postavki je nevaljana ili oštećena.";
+
+"PRESETS_EXPORT_SUCCESS_TITLE" = "Izvoz uspješan";
+"PRESETS_EXPORT_SUCCESS_MESSAGE" = "Vaša predefinirana postavka je uspješno izvezena.";
+
+"PRESETS_EXPORT_FAILURE_TITLE" = "Izvoz nije uspio";
+"PRESETS_EXPORT_FAILURE_MESSAGE" = "Došlo je do pogreške prilikom izvoza vaše predefinirane postavke.";
+
+"PRESETS_APPLY_SUCCESS_TITLE" = "Postavka primijenjena";
+"PRESETS_APPLY_SUCCESS_MESSAGE" = "Predefinirana postavka je uspješno primijenjena.";
+
+"PRESETS_APPLY_FAILURE_TITLE" = "Nije moguće primijeniti postavku";
+"PRESETS_APPLY_FAILURE_MESSAGE" = "Došlo je do pogreške prilikom primjene predefinirane postavke.";
+
+
 /*Deprecated*/
 "TRUSTED_FRIENDS_OPTION_TITLE" = "Twitter Krugovi";
 
@@ -348,35 +441,69 @@
 "VOICE_OPTION_TITLE" = "Glasovni tweetovi";
 "VOICE_OPTION_DETAIL_TITLE" = "Uključi ili isključi glasovne tweetove (samo iOS).";
 
-/*Modern Settings Layout*/
-
-"MODERN_SETTINGS_LAYOUT_TITLE" = "Općenito";
-"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "Prilagodite svoj feed fontovima, temama i još mnogo toga.";
-
-"MODERN_SETTINGS_MEDIA_TITLE" = "Mediji";
-"MODERN_SETTINGS_MEDIA_SUBTITLE" = "Preuzimajte videozapise, omogućite vremenske oznake i još mnogo toga.";
-
-"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
-"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "Bez oglasa i otključajte Blue značajke poput Poništi tweet, teme i prilagođene ikone.";
-
-"MODERN_SETTINGS_PROFILES_TITLE" = "Profil";
-"MODERN_SETTINGS_PROFILES_SUBTITLE" = "Promijenite što vidite na profilima.";
-
-"MODERN_SETTINGS_TWEETS_TITLE" = "Tweetovi i odgovori";
-"MODERN_SETTINGS_TWEETS_SUBTITLE" = "Prilagodite tweetove i uklonite nepotrebne značajke.";
-
-"MODERN_SETTINGS_MESSAGES_TITLE" = "Poruke";
-"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "Prilagodite iskustvo razmjene poruka.";
-
-"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "Laboratorij";
-"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "Isprobajte nestabilne značajke.";
-
 "MODERN_SETTINGS_PLACEHOLDER_TEXT" = "Ovdje još ništa ne prikazujemo.";
+"MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "Ovaj dio stiže uskoro. Pratite nas za još NeoFreeBird značajki!";
 
-"NEW_INAPP_WEB_OPTION_TITLE" = "Poboljšani preglednik u aplikaciji (beta)";
-"NEW_INAPP_WEB_DETAIL_TITLE" = "Koristite Twitterov novi preglednik u aplikaciji za otvaranje poveznica.";
-"CUSTOM_TAB_BAR_PROFILE" = "Profil";
-"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "Sakrij Blue oznake provjere";
-"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "Sakrij plaćenu oznaku provjere na Tweetovima. To ne uključuje račune brendova niti vladine račune.";
+"SOURCE_UNAVAILABLE" = "Izvor nedostupan";
 
-"COOL_KIDS_SECTION_HEADER_TITLE" = "Cool djeca";
+"notif_reposted_your_post_old" = "ponovno je podijelio vašu objavu";
+"notif_reposted_your_Post_old" = "ponovno je podijelio vašu objavu";
+"notif_Reposted_your_post_old" = "Ponovno je podijelio vašu objavu";
+"notif_Reposted_your_Post_old" = "Ponovno je podijelio vašu objavu";
+
+"notif_retweeted_your_tweet_new" = "retweetovao je vaš tweet";
+"notif_retweeted_your_Tweet_new" = "retweetovao je vaš tweet";
+"notif_Retweeted_your_Tweet_new" = "Retweetovao je vaš tweet";
+
+"notif_your_post_old" = "vašu objavu";
+"notif_your_Post_old" = "vašu objavu";
+"notif_your_tweet_new" = "vaš tweet";
+"notif_your_Tweet_new" = "vaš tweet";
+
+"notif_a_post_old" = "objavu";
+"notif_a_Post_old" = "objavu";
+"notif_a_tweet_new" = "tweet";
+"notif_a_Tweet_new" = "tweet";
+
+"notif_new_post_old" = "novu objavu";
+"notif_new_Post_old" = "novu objavu";
+"notif_new_tweet_new" = "novi tweet";
+"notif_new_Tweet_new" = "novi tweet";
+
+"notif_New_post_old" = "Novu objavu";
+"notif_New_Post_old" = "Novu objavu";
+"notif_New_tweet_new" = "Novi tweet";
+"notif_New_Tweet_new" = "Novi tweet";
+
+"notif_recent_post_old" = "nedavnu objavu";
+"notif_recent_Post_old" = "nedavnu objavu";
+"notif_recent_tweet_new" = "nedavni tweet";
+"notif_recent_Tweet_new" = "nedavni tweet";
+
+"notif_Recent_post_old" = "Nedavnu objavu";
+"notif_Recent_Post_old" = "Nedavnu objavu";
+"notif_Recent_tweet_new" = "Nedavni tweet";
+"notif_Recent_Tweet_new" = "Nedavni tweet";
+
+"notif_reposted_old" = "podijelio";
+"notif_Reposted_old" = "Podijelio";
+"notif_retweeted_new" = "retweetovao";
+"notif_Retweeted_new" = "Retweetovao";
+
+"notif_pinned_Post_old" = "Nova prikvačena objava";
+"notif_pinned_Tweet_new" = "Novi prikvačeni tweet";
+
+"notif_your_Posts_old" = "vaše objave";
+"notif_your_Tweets_new" = "vaše tweetove";
+
+"notif_repost_old" = "ponovna objava";
+"notif_retweet_new" = "retweet";
+
+"notif_Repost_old" = "Ponovna objava";
+"notif_Retweet_new" = "Retweet";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "Zaobilaženje atestacije";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "Lažiranje atestacije uređaja. Može, a i ne mora raditi za pojedine značajke.";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "Odgovaranje u web prikazu";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "IPA kreirana od strane @iosdecrypted. Otvorite okvir za odgovor u web prikazu kako biste izbjegli provjeru atestacije.";

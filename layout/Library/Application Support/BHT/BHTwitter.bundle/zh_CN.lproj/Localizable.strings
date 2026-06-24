@@ -9,8 +9,10 @@
 /*Alerts and popups*/
 "RESTART_REQUIRED_ALERT_TITLE" = "需要重新启动";
 "RESTART_REQUIRED_ALERT_MESSAGE" = "您需要重新启动 Twitter 以使更改生效。";
-"RESTART_NOW_BUTTON_TITLE" = "立即重启";
 "MODERN_LAYOUT_RESTART_MESSAGE" = "要切换现代和经典布局，您需要重新启动 Twitter。";
+
+"RESET_COMPLETE_TITLE" = "重置成功";
+"BACKGROUND_RESET_MESSAGE" = "消息背景已重置为默认值。";
 
 "CONFIRM_ALERT_MESSAGE" = "你确定要这样做吗？";
 "YES_BUTTON_TITLE" = "是";
@@ -18,8 +20,53 @@
 "OK_BUTTON_TITLE" = "确定";
 "CANCEL_BUTTON_TITLE" = "取消";
 "SAVE_BUTTON_TITLE" = "保存";
+"RESTART_NOW_BUTTON_TITLE" = "立即重启";
+"NOT_NOW_BUTTON_TITLE" = "现在不要";
+"CONTINUE_BUTTON_TITLE" = "继续";
 
 /*Main menu start*/
+
+/*Settings*/
+
+"MODERN_SETTINGS_LAYOUT_TITLE" = "通用";
+"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "通过自定义字体、导航栏主题等内容，打造属于您的时间线。";
+
+"MODERN_SETTINGS_MEDIA_TITLE" = "图片与视频";
+"MODERN_SETTINGS_MEDIA_SUBTITLE" = "下载视频、启用时间戳等功能。";
+
+"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
+"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "享受无广告体验，解锁如撤回推文、主题、自定义图标等功能。";
+
+"MODERN_SETTINGS_PROFILES_TITLE" = "个人资料";
+"MODERN_SETTINGS_PROFILES_SUBTITLE" = "更改您在资料中看到的内容。";
+
+"MODERN_SETTINGS_TWEETS_TITLE" = "推文与回复";
+"MODERN_SETTINGS_TWEETS_SUBTITLE" = "调整推文功能，移除不需要的功能。";
+
+"MODERN_SETTINGS_MESSAGES_TITLE" = "消息";
+"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "自定义您的私信体验。";
+
+"MODERN_SETTINGS_SEARCH_TITLE" = "搜索与探索";
+"MODERN_SETTINGS_SEARCH_SUBTITLE" = "更改您在“搜索”标签页中看到的内容。";
+
+"MODERN_SETTINGS_PRESETS_TITLE" = "预设集";
+"MODERN_SETTINGS_PRESETS_SUBTITLE" = "应用一组预先配置好的设置，或者导出和导入您自己的设置。";
+
+"MODERN_SETTINGS_WEB_TITLE" = "网页与链接";
+"MODERN_SETTINGS_WEB_SUBTITLE" = "调整链接以及应用内建浏览器的行为模式。";
+
+"MODERN_SETTINGS_BRANDING_TITLE" = "品牌外观";
+"MODERN_SETTINGS_BRANDING_SUBTITLE" = "调整你看到的 X 品牌形象显示程度。";
+
+"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "实验室";
+"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "试用目前正在测试的实验功能。";
+
+"MODERN_SETTINGS_DEBUG_TITLE" = "调试";
+"MODERN_SETTINGS_DEBUG_SUBTITLE" = "找出某项功能无法运作的原因。";
+
+"COOL_KIDS_SECTION_HEADER_TITLE" = "酷小孩";
+"SPECIAL_THANKS_SECTION_HEADER_TITLE" = "特别感谢";
+"FOLLOW_OFFICIAL_PAGE_SECTION_HEADER_TITLE" = "关注 NeoFreeBird";
 
 /*General*/
 "MAIN_SECTION_HEADER_TITLE" = "通用";
@@ -38,6 +85,9 @@
 
 "PADLOCK_OPTION_TITLE" = "锁定 Twitter";
 "PADLOCK_OPTION_DETAIL_TITLE" = "启用 Face ID 或密码解锁 Twitter。";
+
+"NEW_INAPP_WEB_OPTION_TITLE" = "改进的应用内浏览器（测试版）";
+"NEW_INAPP_WEB_DETAIL_TITLE" = "使用 Twitter 的新应用内浏览器打开链接。";
 
 "ALWAYS_OPEN_SAFARI_OPTION_TITLE" = "使用外部浏览器";
 "ALWAYS_OPEN_SAFARI_OPTION_DETAIL_TITLE" = "在 Safari 或默认浏览器中打开链接。";
@@ -68,6 +118,9 @@
 "TWEET_CONFIRM_OPTION_TITLE" = "确认发推";
 "TWEET_CONFIRM_OPTION_DETAIL_TITLE" = "发布推文前进行确认。";
 
+"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "隐藏 Blue 认证标记";
+"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "在推文中隐藏付费认证标记。这不包括品牌或政府账号。";
+
 "HIDE_VIEW_COUNT_OPTION_TITLE" = "隐藏浏览量";
 "HIDE_VIEW_COUNT_OPTION_DETAIL_TITLE" = "不显示推文下方的浏览次数。";
 
@@ -75,6 +128,9 @@
 "HIDE_MARKBOOK_BUTTON_OPTION_DETAIL_TITLE" = "移除推文上的书签按钮。";
 
 "DISABLE_SENSITIVE_TWEET_WARNINGS_OPTION_TITLE" = "关闭敏感内容警告";
+
+"BYPASS_AGE_VERIFICATION_OPTION_TITLE" = "绕过年龄验证";
+"BYPASS_AGE_VERIFICATION_OPTION_DETAIL_TITLE" = "跳过敏感内容的年龄验证流程。";
 
 "HIDE_GROK_ANALYZE_BUTTON_TITLE" = "隐藏 Grok 分析按钮";
 "HIDE_GROK_ANALYZE_BUTTON_DETAIL_TITLE" = "隐藏推文中的 Grok 分析按钮。";
@@ -153,13 +209,13 @@
 "AUTO_HIGHEST_LOAD_OPTION_TITLE" = "高质量媒体";
 "AUTO_HIGHEST_LOAD_OPTION_DETAIL_TITLE" = "以最佳质量上传和浏览媒体内容。";
 
-
 "DISABLE_VIDEO_LAYER_CAPTIONS_OPTION_TITLE" = "关闭视频字幕";
 
 "FORCE_TWEET_FULL_FRAME_TITLE" = "大图显示";
 
 "RESTORE_VIDEO_TIMESTAMP_TITLE" = "视频时间戳";
 "RESTORE_VIDEO_TIMESTAMP_DETAIL_TITLE" = "在沉浸式播放器中显示时间戳。";
+
 
 /*Twitter Blue*/
 "TWITTER_BLUE_SECTION_HEADER_TITLE" = "Twitter Blue";
@@ -206,6 +262,12 @@
 
 "STOP_HIDING_TAB_BAR_TITLE" = "始终显示标签栏";
 "STOP_HIDING_TAB_BAR_DETAIL_TITLE" = "滚动时不要隐藏标签栏（可能导致问题）。";
+
+"HIDE_CUSTOM_TIMELINES_OPTION_TITLE" = "隐藏自定义时间线";
+"HIDE_CUSTOM_TIMELINES_OPTION_DETAIL_TITLE" = "移除主页时间线标签页中的“添加”按钮。需要重启应用。";
+
+"HIDE_TRENDS_OPTION_TITLE" = "隐藏热度趋势";
+"HIDE_TRENDS_OPTION_DETAIL_TITLE" = "在“探索”标签页仅显示搜索栏，隐藏所有趋势、新闻和标签页。";
 
 "CLASSIC_TAB_BAR_SETTINGS_TITLE" = "经典导航栏";
 "CLASSIC_TAB_BAR_SETTINGS_DETAIL" = "将您的强调色应用于当前选中的导航项。";
@@ -282,8 +344,8 @@
 /*Copy profile info*/
 "COPY_PROFILE_INFO_MENU_OPTION_1" = "复制简介";
 "COPY_PROFILE_INFO_MENU_OPTION_2" = "复制用户名";
-"COPY_PROFILE_INFO_MENU_OPTION_3" = "复制完整用户名";
-"COPY_PROFILE_INFO_MENU_OPTION_4" = "复制简介链接";
+"COPY_PROFILE_INFO_MENU_OPTION_3" = "复制姓名";
+"COPY_PROFILE_INFO_MENU_OPTION_4" = "复制个人网站";
 "COPY_PROFILE_INFO_MENU_OPTION_5" = "复制位置";
 
 /*Theme*/
@@ -307,6 +369,7 @@
 "CUSTOM_TAB_BAR_MESSAGES" = "消息";
 "CUSTOM_TAB_BAR_GROK" = "Grok";
 "CUSTOM_TAB_BAR_VIDEO" = "视频";
+"CUSTOM_TAB_BAR_PROFILE" = "个人资料";
 "CUSTOM_TAB_BAR_SECTION_1_TITLE" = "已启用";
 "CUSTOM_TAB_BAR_SECTION_2_TITLE" = "已禁用";
 "CUSTOM_TAB_BAR_RESET_BUTTON" = "恢复默认";
@@ -330,6 +393,36 @@
 /*Refresh pill text*/
 "REFRESH_PILL_TEXT" = "已推文";
 
+"NOTIF_REPLACE_POST_WITH_TWEET_OPTION_TITLE" = "通知中贴文替换为推文";
+"NOTIF_REPLACE_POST_WITH_TWEET_DETAIL_TITLE" = "将通知面板中的“贴文 (Post)”替换为“推文 (Tweet)”。这会影响通知中的所有文本。";
+
+"COLOR_TWITTER_ICON_OPTION_TITLE" = "为 Twitter 图标着色";
+"COLOR_TWITTER_ICON_DETAIL_TITLE" = "将强调色应用于顶部栏中的 Twitter 图标。";
+
+"REFRESH_PILL_OPTION_TITLE" = "在刷新提示中添加“已推文”";
+"REFRESH_PILL_DETAIL_TITLE" = "当有人发布推文时，将“已推文”标签添加回刷新提示中。";
+
+/*Presets*/
+
+"PRESETS_IMPORT_SUCCESS_TITLE" = "导入成功";
+"PRESETS_IMPORT_SUCCESS_MESSAGE" = "您的预设集已成功导入。";
+
+"PRESETS_IMPORT_FAILURE_TITLE" = "导入失败";
+"PRESETS_IMPORT_FAILURE_MESSAGE" = "预设集文件无效或已损坏。";
+
+"PRESETS_EXPORT_SUCCESS_TITLE" = "导出成功";
+"PRESETS_EXPORT_SUCCESS_MESSAGE" = "您的预设集已成功导出。";
+
+"PRESETS_EXPORT_FAILURE_TITLE" = "导出失败";
+"PRESETS_EXPORT_FAILURE_MESSAGE" = "导出您的预设集时发生错误。";
+
+"PRESETS_APPLY_SUCCESS_TITLE" = "已应用预设集";
+"PRESETS_APPLY_SUCCESS_MESSAGE" = "预设集已成功应用。";
+
+"PRESETS_APPLY_FAILURE_TITLE" = "无法应用预设集";
+"PRESETS_APPLY_FAILURE_MESSAGE" = "应用预设集时发生错误。";
+
+
 /*Deprecated*/
 "TRUSTED_FRIENDS_OPTION_TITLE" = "Twitter 圈子";
 
@@ -348,35 +441,69 @@
 "VOICE_OPTION_TITLE" = "语音推文";
 "VOICE_OPTION_DETAIL_TITLE" = "启用或禁用语音推文（仅限 iOS）。";
 
-/*Modern Settings Layout*/
-
-"MODERN_SETTINGS_LAYOUT_TITLE" = "常规";
-"MODERN_SETTINGS_LAYOUT_SUBTITLE" = "通过自定义字体、导航栏主题等内容，打造属于您的时间线。";
-
-"MODERN_SETTINGS_MEDIA_TITLE" = "媒体";
-"MODERN_SETTINGS_MEDIA_SUBTITLE" = "下载视频、启用时间戳等功能。";
-
-"MODERN_SETTINGS_TWITTER_BLUE_TITLE" = "Twitter Blue";
-"MODERN_SETTINGS_TWITTER_BLUE_SUBTITLE" = "享受无广告体验，解锁如撤回推文、主题、自定义图标等功能。";
-
-"MODERN_SETTINGS_PROFILES_TITLE" = "个人资料";
-"MODERN_SETTINGS_PROFILES_SUBTITLE" = "更改您在资料中看到的内容。";
-
-"MODERN_SETTINGS_TWEETS_TITLE" = "推文与回复";
-"MODERN_SETTINGS_TWEETS_SUBTITLE" = "调整推文功能，移除不需要的功能。";
-
-"MODERN_SETTINGS_MESSAGES_TITLE" = "消息";
-"MODERN_SETTINGS_MESSAGES_SUBTITLE" = "自定义您的私信体验。";
-
-"MODERN_SETTINGS_EXPERIMENTAL_TITLE" = "实验室";
-"MODERN_SETTINGS_EXPERIMENTAL_SUBTITLE" = "试用不稳定的新功能。";
-
 "MODERN_SETTINGS_PLACEHOLDER_TEXT" = "这里暂时还没有内容。";
+"MODERN_SETTINGS_PLACEHOLDER_DETAIL_TEXT" = "此区域即将推出。敬请期待更多 NeoFreeBird 的新功能！";
 
-"NEW_INAPP_WEB_OPTION_TITLE" = "改进的应用内浏览器（测试版）";
-"NEW_INAPP_WEB_DETAIL_TITLE" = "使用 Twitter 的新应用内浏览器打开链接。";
-"CUSTOM_TAB_BAR_PROFILE" = "个人资料";
-"HIDE_BLUE_VERIFIED_OPTION_TITLE" = "隐藏 Blue 认证标记";
-"HIDE_BLUE_VERIFIED_OPTION_DETAIL_TITLE" = "在推文中隐藏付费认证标记。这不包括品牌或政府账号。";
+"SOURCE_UNAVAILABLE" = "来源无法使用";
 
-"COOL_KIDS_SECTION_HEADER_TITLE" = "酷小孩";
+"notif_reposted_your_post_old" = "转发了你的贴文";
+"notif_reposted_your_Post_old" = "转发了你的贴文";
+"notif_Reposted_your_post_old" = "转发了你的贴文";
+"notif_Reposted_your_Post_old" = "转发了你的贴文";
+
+"notif_retweeted_your_tweet_new" = "转推了你的推文";
+"notif_retweeted_your_Tweet_new" = "转推了你的推文";
+"notif_Retweeted_your_Tweet_new" = "转推了你的推文";
+
+"notif_your_post_old" = "你的贴文";
+"notif_your_Post_old" = "你的贴文";
+"notif_your_tweet_new" = "你的推文";
+"notif_your_Tweet_new" = "你的推文";
+
+"notif_a_post_old" = "一篇贴文";
+"notif_a_Post_old" = "一篇贴文";
+"notif_a_tweet_new" = "一篇推文";
+"notif_a_Tweet_new" = "一篇推文";
+
+"notif_new_post_old" = "新贴文";
+"notif_new_Post_old" = "新贴文";
+"notif_new_tweet_new" = "新推文";
+"notif_new_Tweet_new" = "新推文";
+
+"notif_New_post_old" = "新贴文";
+"notif_New_Post_old" = "新贴文";
+"notif_New_tweet_new" = "新推文";
+"notif_New_Tweet_new" = "新推文";
+
+"notif_recent_post_old" = "最近的贴文";
+"notif_recent_Post_old" = "最近的贴文";
+"notif_recent_tweet_new" = "最近的推文";
+"notif_recent_Tweet_new" = "最近的推文";
+
+"notif_Recent_post_old" = "最近的贴文";
+"notif_Recent_Post_old" = "最近的贴文";
+"notif_Recent_tweet_new" = "最近的推文";
+"notif_Recent_Tweet_new" = "最近的推文";
+
+"notif_reposted_old" = "转发了";
+"notif_Reposted_old" = "转发了";
+"notif_retweeted_new" = "转推了";
+"notif_Retweeted_new" = "转推了";
+
+"notif_pinned_Post_old" = "新的置顶贴文";
+"notif_pinned_Tweet_new" = "新的置顶推文";
+
+"notif_your_Posts_old" = "你的贴文";
+"notif_your_Tweets_new" = "你的推文";
+
+"notif_repost_old" = "转发";
+"notif_retweet_new" = "转推";
+
+"notif_Repost_old" = "转发";
+"notif_Retweet_new" = "转推";
+
+"ATTESTATION_BYPASS_OPTION_TITLE" = "绕过设备认证";
+"ATTESTATION_BYPASS_OPTION_DETAIL_TITLE" = "模拟设备认证，此功能不保证在所有特性下都有效。";
+
+"REPLY_IN_WEBVIEW_OPTION_TITLE" = "在网页视图中回复";
+"REPLY_IN_WEBVIEW_OPTION_DETAIL_TITLE" = "由 @iosdecrypted 制作的 IPA，可在网页视图中打开回复框以避免设备认证。";
